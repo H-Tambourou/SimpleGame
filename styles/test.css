@@ -1,0 +1,149 @@
+body {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root {
+  --shadowSize:25px;
+  --shadow: var(--shadowSize) var(--shadowSize) 0 2px rgba(255, 0, 0, 0.3),
+    calc(var(--shadowSize) * -1) calc(var(--shadowSize) * -1) 0 2px
+      rgba(0, 255, 0, 0.33);
+  --bigShadow: calc(var(--shadowSize) * 2) calc(var(--shadowSize) * 2) 0 2px
+      rgba(255, 0, 0, 0.5),
+    calc((var(--shadowSize) * 2) * -1) calc((var(--shadowSize) * 2) * -1) 0 2px
+      rgba(0, 255, 0, 0.5);
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(9, 1, 1) translateX(-10vw);
+            transform: scale3d(9, 1, 1) translateX(-10vw);
+    -webkit-box-shadow: var(--bigShadow);
+            box-shadow: var(--bigShadow);
+  }
+  40% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: scale3d(1, 1, 1) translateX(0);
+            transform: scale3d(1, 1, 1) translateX(0);
+  }
+  45% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.35, 1.8, 1);
+            transform: scale3d(0.35, 1.8, 1);
+  }
+  75% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: scale3d(0.35, 1.8, 1);
+            transform: scale3d(0.35, 1.8, 1);
+  }
+  80% {
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    -webkit-transform: scale3d(1.1, 1, 1);
+            transform: scale3d(1.1, 1, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.4, 1, 1);
+            transform: scale3d(1.4, 1, 1);
+  }
+  100% {
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(9, 1, 1) translateX(-10vw);
+            transform: scale3d(9, 1, 1) translateX(-10vw);
+    -webkit-box-shadow: var(--bigShadow);
+            box-shadow: var(--bigShadow);
+  }
+  40% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: scale3d(1, 1, 1) translateX(0);
+            transform: scale3d(1, 1, 1) translateX(0);
+  }
+  45% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.35, 1.8, 1);
+            transform: scale3d(0.35, 1.8, 1);
+  }
+  75% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: scale3d(0.35, 1.8, 1);
+            transform: scale3d(0.35, 1.8, 1);
+  }
+  80% {
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    -webkit-transform: scale3d(1.1, 1, 1);
+            transform: scale3d(1.1, 1, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.4, 1, 1);
+            transform: scale3d(1.4, 1, 1);
+  }
+  100% {
+  }
+}
+
+.box {
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  background: white;
+  border: 2px solid black;
+  height: 250px;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+.wrap {
+  padding: 200px;
+}
+
+.wrap:hover .box, .wrap:active .box {
+  -webkit-animation: appear 1s cubic-bezier(0.77, 0.33, 1, 0.72) 1;
+          animation: appear 1s cubic-bezier(0.77, 0.33, 1, 0.72) 1;
+}
+
+button {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: crimson;
+}
+/*# sourceMappingURL=test.css.map */
